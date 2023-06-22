@@ -1,0 +1,21 @@
+from github import Github
+
+# Введите ваш личный токен доступа GitHub
+access_token = 'YOUR_ACCESS_TOKEN'
+
+# Создание экземпляра объекта GitHub
+g = Github(access_token)
+
+# Введите имя пользователя GitHub и название репозитория
+username = 'YOUR_USERNAME'
+repo_name = 'REPOSITORY_NAME'
+
+# Получение объекта пользователя
+user = g.get_user(username)
+
+# Получение объекта репозитория
+repo = user.get_repo(repo_name)
+
+# Введите путь и название нового файла
+file_path = 'path/to/new_file.txt'
+file_name = 'new_file.txt'
